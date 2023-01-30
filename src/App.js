@@ -1,4 +1,6 @@
 import './App.css';
+import Navbar from './components/Navbar';
+
 import {
   BrowserRouter as Router,
   Route,
@@ -18,7 +20,9 @@ import Q10 from './pages/Q10';
 function App() {
   return (
     <div className="App">
-     <Router>
+      <Navbar />
+      <Q1/>
+     {/* <Router>
      <Route path='/' >
       <Home />
       </Route>
@@ -52,7 +56,7 @@ function App() {
       <Route path='/Q10' >
       <Q10 />
       </Route>
-     </Router>
+     </Router> */}
     </div>
   );
 }
