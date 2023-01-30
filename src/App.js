@@ -1,5 +1,4 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import Results from './pages/Results'
 
 import {
@@ -7,13 +6,13 @@ import {
   Route,
 } from "react-router-dom";
 import Home from './pages/Home'
+import QuestionPage from './pages/QuestionPage';
 
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Results />
+      <QuestionPage />
      {/* <Router>
      <Route path='/' >
       <Home />
