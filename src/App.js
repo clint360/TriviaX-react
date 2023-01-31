@@ -20,7 +20,7 @@ function App() {
       <Route path='results' element={<ResultsAnalytics />} />
       </Routes>
      </Router> 
-     <div style={{textAlign: 'center', background: '#090909', padding: '5px'}}>Built with ❤️ by Clint </div>
+     <div style={{textAlign: 'center', background: '#090909', padding: '5px'}}>Built with ❤️ by <strong>@clint360</strong> </div>
     </div>
   );
 }
