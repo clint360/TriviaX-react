@@ -5,12 +5,15 @@
     color: white;
     display: flex;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+}
+
+#area {
+    min-width: 390px;
+    width: 40%;
+    background-color: rgba(208, 131, 31, 0);
 }
 
 .logo-section {
-    padding-top: 180px;
     margin: auto;
     width: 20%;
     min-width: 250px;
@@ -36,7 +39,6 @@
     font-size: 22px;
     width: 40%;
     min-width: 390px;
-    margin: auto;
     text-align: center;
 }
 

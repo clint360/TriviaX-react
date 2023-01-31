@@ -1,27 +1,29 @@
 import React from 'react'
 import './Results.css'
+import { Link } from 'react-router-dom'
 
-export default function Results({userScore}) {
-  const decideColor = (userScore) => { 
-    if({userScore} < 5) { 
-      return 'red'}
-      else { return 'blue'} 
+
+export default function Results({userScore, total}) {
+  const decideColor = (score) => { 
+    if(score < (total/2)) { 
+      return '#ff2226'}
+      else { return '#87cd56'} 
     }
   const colorSt = {
-    color: {decideColor}
+    color: decideColor(userScore)
   }
   return (
     <div id='main'>
         <div className='container'>
         <div className='bigcongratulations'>
-            {userScore >= 5 ? 'Congratulations' : 'Sorry'}
+            {userScore >= (total/2) ? 'Congratulations' : 'Sorry'}
         </div>
         <div className='youscored'>
             You Scored:
             <div className='score'>
-            <span style={colorSt}>{userScore}</span>/10
+            <span style={colorSt}>{userScore}</span>/{total}
             </div>
-            <button>View Details</button>
+            <Link to='/results'><button>View Details</button></Link>
         </div>
         </div>
         </div>
