@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.main {
+    background: radial-gradient(rgb(62, 58, 58), rgb(0, 0, 0));
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#navbar .logo p {
+    color: white;
+}
+
+.area {
+    width: 100%;
+    margin: auto;
+}
+
+.questionbody {
+    margin: auto;
+    padding-bottom: 20px;
+    max-width: 800px;
+    width: 90%;
+    height: auto;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    box-shadow: rgba(159, 159, 159, 0.05) 0px 15px 25px, rgba(179, 179, 179, 0.2) 0px 1px 12px;
+}
+
+.questionbody_header {
+    display: flex;
+    flex-wrap: wrap;
+    background: black;
+    padding: 10px;
+}
+
+.questionnumber p {
+    color: rgb(0, 195, 36);
+}
+
+.category p {
+    color: rgb(255, 255, 255);
+}
+
+.source {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.source img{
+   width: 50px;
+}
+
+.source, 
+.questionnumber, 
+.category {
+    flex-basis: 33%;
+}
+
+.questionsection {
+    color: black;
+    font-size: 20px;
+}
+
+.response .button{
+    color: black;
+    border: 2px solid rgba(0, 0, 0, 0);
+    border-radius: 5px;
+    padding: 2px 3px;
+    width: 60px;
+}
+
+.response .true {
+    background: green;
+    color: white;
+}
+
+.response .false {
+    background: red;
+    color: white;
+}
+
+.questionsection {
+    min-height: 100px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.response {
+    text-align: center;
+    width: 200px;
+    margin: auto;
+}
+
+.response .button {
+    margin: 0px 5px;
+}
+
+.next {
+    padding: 5px;
+    padding-top: 10px;
+    max-width: 800px;
+    width: 90%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    margin: auto;
+}
+
+.next button {
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+
+.response .button:hover {
+    box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(217, 217, 217, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
