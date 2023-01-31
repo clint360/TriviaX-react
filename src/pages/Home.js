@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../images/x.png';
-import './Home.css'
+import './Home.css';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
@@ -12,7 +13,7 @@ export default function Home() {
          </div>
          <div className="desc">
          <p>Showcase your knowledge by surfing through 10 Yes/No questions proving your worth</p>
-         <button className='startnow'>Start Now</button>
+        <Link to='/questions/q1'><button className='startnow'>Start Now</button></Link> 
          </div>
         </section>
     </div>
