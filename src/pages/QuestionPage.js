@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './QuestionPage.css'
 import './Navbar.css';
 import ProgressBar from '../Components/ProgressBar';
-import axios from 'axios';
 import { fromapi } from '../Data/api';
 import Results from './Results';
 
@@ -15,15 +14,15 @@ export default function QuestionPage() {
   const [userScore, setUserScore] = useState(parseInt(0));
   const [userResponse, setUserResponse] = useState("");
   const [localdata, setData] = useState(fromapi); 
-  useEffect(() => {
-   axios.get("https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean")
-   .then((response) => {
-    const localdata = [...response.data.results];
-    setData((prevArray) => prevArray, localdata);
-    console.log(localdata);
-    console.log(localdata.length)
-   });
- }, [])
+//   useEffect(() => {
+//    axios.get("https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean")
+//    .then((response) => {
+//     const localdata = [...response.data.results];
+//     setData((prevArray) => prevArray, localdata);
+//     console.log(localdata);
+//     console.log(localdata.length)
+//    });
+//  }, [])
 
   const setToTrue = (userResponse, userScore) => {
     userResponse = "True"
