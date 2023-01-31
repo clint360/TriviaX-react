@@ -4,7 +4,7 @@
 }
 .main {
     background: radial-gradient(rgb(62, 58, 58), rgb(0, 0, 0));
-    height: 100vh;
+    min-height: 95.8vh;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -33,7 +33,6 @@
 
 .questionbody_header {
     display: flex;
-    flex-wrap: wrap;
     background: black;
     padding: 10px;
 }
@@ -54,13 +53,14 @@
 }
 
 .source img{
-   width: 50px;
+   width: 80px;
 }
 
 .source, 
 .questionnumber, 
 .category {
     flex-basis: 33%;
+    margin-left: 5px;
 }
 
 .questionsection {

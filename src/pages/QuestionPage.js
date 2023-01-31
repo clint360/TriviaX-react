@@ -63,7 +63,7 @@ export default function QuestionPage() {
     setProgress(progress+(100/localdata.length))
   }
 
- if (count !== localdata.length - 1 ) { return ( 
+ if (count !== localdata.length) { return ( 
         <div className='main'>
         <div id='navbar'> 
       <div className='logo'>
@@ -91,8 +91,8 @@ export default function QuestionPage() {
             <div className='questionsection' dangerouslySetInnerHTML={{__html: localdata[count].question}}/>
                 
             <div className='response'>
-            {count === localdata.length - 1 ? <Link to='/results'><button className='button true'>True</button></Link> : <button className='button true' onClick={()=>{setToTrue(userResponse, userScore)}}>True</button>}
-            {count === localdata.length - 1 ? <Link to='/results'><button className='button false'>False</button></Link> :    <button className='button false' onClick={()=>{setToFalse(userResponse, userScore)}}>False</button>}
+    <button className='button true' onClick={()=>{setToTrue(userResponse, userScore)}}>True</button>
+    <button className='button false' onClick={()=>{setToFalse(userResponse, userScore)}}>False</button>
             </div>
         </div>
         <div className='next'>

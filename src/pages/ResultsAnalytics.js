@@ -4,14 +4,14 @@ import { fromapi } from '../Data/api';
 export default function ResultsAnalytics () {
    const mainStyle = {
     backgroundColor: 'black',
-    height: '100vh',
+    minHeight: '95.8vh',
+    height: 'auto',
     fontFamily: 'Poppins',
     padding: '10px'
    }
 
    const resultStyle = {
     display: 'flex',
-    flexWrap: 'wrap',
     paddingBottom: '10px', 
    }
 
@@ -24,11 +24,17 @@ export default function ResultsAnalytics () {
    }
 
    const column2 = {
-    width: '20%'
+    width: '20%',
+    minWidth: '50px',
+    overflow: 'hidden',
+    marginRight: '10px'
    }
 
    const column3 = {
-    width: '10%'
+    width: '10%',
+    minWidth: '50px',
+    overflow: 'hidden',
+    marginRight: '10px'
    }
    
    const column4 = {
@@ -44,8 +50,8 @@ export default function ResultsAnalytics () {
         <p style={column}>Q No</p>
         <p style={column1}>Question</p>
         <p style={column2}>Category</p>
-        <p style={column3}>Answer</p>
-        <p style={column4}>User Answer</p>
+        <p style={column3}>Corr. Answer</p>
+        <p style={column4}>Your Answer</p>
         </div>
         <br />
         <div>{fromapi.map((item, index) => {
