@@ -1,16 +1,12 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './QuestionPage.css'
 import './Navbar.css';
 import ProgressBar from '../Components/ProgressBar';
 import axios from 'axios';
-import { finalScoreContext } from '../App';
 import { fromapi } from '../Data/api';
 import Results from './Results';
-import {
-  BrowserRouter as Router, Routes,
-  Route,
-} from "react-router-dom";
+
 
 export default function QuestionPage() {
   // const { userFinalScore } = useContext(finalScoreContext);
@@ -35,6 +31,9 @@ export default function QuestionPage() {
     console.log(userResponse)
     compare(userResponse, userScore);
     nexter(count);
+    fromapi[count].user_answer = userResponse;
+    const localdata = fromapi;
+    setData(localdata)
   }
 
   const setToFalse = (userResponse, userScore) => {
@@ -43,6 +42,9 @@ export default function QuestionPage() {
     console.log(userResponse)
     compare(userResponse, userScore);
     nexter(count);
+    fromapi[count].user_answer = userResponse;
+    const localdata = fromapi;
+    setData(localdata)
   }
 
   const compare = (userResponse, userScore) => {

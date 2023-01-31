@@ -7,7 +7,8 @@ export const fromapi = [
         "correct_answer": "False",
         "incorrect_answers": [
             "True"
-        ]
+        ],
+        
     },
     {
         "category": "Entertainment: Video Games",
@@ -17,7 +18,8 @@ export const fromapi = [
         "correct_answer": "True",
         "incorrect_answers": [
             "False"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Entertainment: Board Games",
@@ -27,7 +29,8 @@ export const fromapi = [
         "correct_answer": "True",
         "incorrect_answers": [
             "False"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Entertainment: Film",
@@ -37,7 +40,8 @@ export const fromapi = [
         "correct_answer": "False",
         "incorrect_answers": [
             "True"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Politics",
@@ -47,7 +51,8 @@ export const fromapi = [
         "correct_answer": "False",
         "incorrect_answers": [
             "True"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Entertainment: Music",
@@ -57,7 +62,8 @@ export const fromapi = [
         "correct_answer": "False",
         "incorrect_answers": [
             "True"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Entertainment: Japanese Anime & Manga",
@@ -67,7 +73,8 @@ export const fromapi = [
         "correct_answer": "True",
         "incorrect_answers": [
             "False"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Art",
@@ -87,7 +94,8 @@ export const fromapi = [
         "correct_answer": "True",
         "incorrect_answers": [
             "False"
-        ]
+        ],
+        "user_answer": ""
     },
     {
         "category": "Entertainment: Musicals & Theatres",
@@ -97,6 +105,7 @@ export const fromapi = [
         "correct_answer": "True",
         "incorrect_answers": [
             "False"
-        ]
+        ],
+        "user_answer": ""
     }
 ];

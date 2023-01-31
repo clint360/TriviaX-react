@@ -5,7 +5,8 @@ export default function ResultsAnalytics () {
    const mainStyle = {
     backgroundColor: 'black',
     height: '100vh',
-    fontFamily: 'Poppins'
+    fontFamily: 'Poppins',
+    padding: '10px'
    }
 
    const resultStyle = {
@@ -54,6 +55,7 @@ export default function ResultsAnalytics () {
          <p style={column1} dangerouslySetInnerHTML={{__html: item.question}}/>
          <p style={column2}>{item.category}</p>
          <p style={column3}>{item.correct_answer}</p>
+         <p style={column4}>{item.user_answer}</p>
          </div>
           )
         })}</div>

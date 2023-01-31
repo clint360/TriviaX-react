@@ -16,7 +16,7 @@ export default function Results({userScore, total}) {
     <div id='main'>
         <div className='container'>
         <div className='bigcongratulations'>
-            {userScore >= (total/2) ? 'Congratulations' : 'Sorry'}
+            {userScore >= (total/2) ? 'Congratulations🥳' : 'You Failed!😂'}
         </div>
         <div className='youscored'>
             You Scored:

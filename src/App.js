@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react';
+import React, { createContext } from 'react';
 import './App.css';
 import {
   BrowserRouter as Router, Routes,
@@ -11,9 +11,7 @@ import Home from './pages/Home'
 export const finalScoreContext = createContext(null);
 
 function App() {
-  const [userFinalScore, setUserFinalScore] = useState(0);
   return (
-    <finalScoreContext.Provider>
     <div className="App">
       <Router>
       <Routes>
@@ -23,7 +21,6 @@ function App() {
       </Routes>
      </Router> 
     </div>
-    </finalScoreContext.Provider>
   );
 }
 

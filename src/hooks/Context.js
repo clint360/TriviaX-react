@@ -1,11 +1,11 @@
-import React, { createContext, useState } from "react"; 
+// import React, { createContext, useState } from "react"; 
 
-const quizContext = createContext();
+// const quizContext = createContext();
 
 
-export default function Context() {
-    const [ userFinalScore, setUserFinalScore ] = useState(0);
-  return (
-    <div>Context</div>
-  )
-}
+// export default function Context() {
+//     const [ userFinalScore, setUserFinalScore ] = useState(0);
+//   return (
+//     <div>Context</div>
+//   )
+// }
