@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './QuestionPage.css'
 import './Navbar.css';
 import ProgressBar from '../Components/ProgressBar';
-import { fromapi } from '../Data/api';
 import Results from './Results';
+import { Context } from '../hooks/Context';
 
 
 export default function QuestionPage() {
   // const { userFinalScore } = useContext(finalScoreContext);
+  const { questions } = useContext(Context)
   const [count, setCount] = useState(0);
   const [progress, setProgress] = useState(0);
   const [userScore, setUserScore] = useState(parseInt(0));
   const [userResponse, setUserResponse] = useState("");
-  const [localdata, setData] = useState(fromapi); 
+  const fromapi = questions;
+  const [localdata, setData] = useState(questions); 
 //   useEffect(() => {
 //    axios.get("https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean")
 //    .then((response) => {
