@@ -14,7 +14,7 @@ export default function Home() {
          </div>
          <div className="desc">
          <p>Showcase your knowledge by surfing through 10 Yes/No questions proving your worth</p>
-       <br /> <Link to='/questions/q1'><button className='startnow'>Start Now</button></Link> 
+       <br /> <Link to='/questions/1'><button className='startnow'>Start Now</button></Link> 
          </div>
          </div>
         </section>

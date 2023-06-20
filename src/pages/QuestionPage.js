@@ -1,5 +1,6 @@
-import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useContext, useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router-dom';
 import './QuestionPage.css'
 import './Navbar.css';
 import ProgressBar from '../Components/ProgressBar';
@@ -9,22 +10,14 @@ import { Context } from '../hooks/Context';
 
 export default function QuestionPage() {
   // const { userFinalScore } = useContext(finalScoreContext);
-  const { questions } = useContext(Context)
+  const { questions, setResponses } = useContext(Context)
   const [count, setCount] = useState(0);
   const [progress, setProgress] = useState(0);
   const [userScore, setUserScore] = useState(parseInt(0));
   const [userResponse, setUserResponse] = useState("");
   const fromapi = questions;
   const [localdata, setData] = useState(questions); 
-//   useEffect(() => {
-//    axios.get("https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean")
-//    .then((response) => {
-//     const localdata = [...response.data.results];
-//     setData((prevArray) => prevArray, localdata);
-//     console.log(localdata);
-//     console.log(localdata.length)
-//    });
-//  }, [])
+  let { questionId } = useParams();
 
   const setToTrue = (userResponse, userScore) => {
     userResponse = "True"
@@ -55,13 +48,20 @@ export default function QuestionPage() {
       setUserScore((prevScore) => prevScore + 0);
     }
     console.log(userScore)
+    setResponses((prev)=>[...prev, userResponse]);
+    setUserResponse("");
   }
+ 
+  useEffect(()=>{
+    questionId = 1;
+  },[]);
 
   const testData = { bgcolor: "#6a1b9a", completed: progress };
   const nexter = (count) => {
-    setTimeout(() => {setCount(count + 1)}, 200)
-    console.log(count);
-    setProgress(progress+(100/localdata.length))
+    setTimeout(() => {setCount(count + 1)}, 100);
+     questionId = questionId+1;
+    setProgress(progress+(100/localdata.length));
+    setResponses((prev)=>[...prev, userResponse]);
   }
 
  if (count !== localdata.length) { return ( 
